@@ -1,0 +1,7 @@
+# core
+node_modules
+dist
+
+# flow-typed annotations
+flow-typed/
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaScript Playground</title>
+		<!--[if IE
+			]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+		/><![endif]-->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<link
+			rel="stylesheet"
+			href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+		/>
+	</head>
+
+	<body>
+		<main>
+			<h1>JavaScript Playground</h1>
+		</main>
+
+		<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+	</body>
+</html>
