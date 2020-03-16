@@ -1,6 +1,5 @@
 // webpack v4
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -12,13 +11,11 @@ module.exports = {
 		filename: '[name].[chunkhash].js'
 	},
 	devtool: 'eval-source-map',
-	stats: 'errors-only',
-	target: 'node',
-	externals: [nodeExternals()],
+	stats: 'errors-warnings',
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
