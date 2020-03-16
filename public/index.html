@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>JavaScript Playground</title>
+		<title>React Timer App</title>
 		<!--[if IE
 			]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 		/><![endif]-->
@@ -17,7 +17,7 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+		<link rel="stylesheet" href="./../src/styles/semantic-dist/semantic.css" />
 		<link
 			rel="stylesheet"
 			href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
@@ -26,7 +26,10 @@
 
 	<body>
 		<main>
-			<h1>JavaScript Playground</h1>
+			<div class="main ui text container">
+				<h1 class="ui dividing centered header">Create a Timer</h1>
+				<div id="react-entry"></div>
+			</div>
 		</main>
 
 		<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
