@@ -1,7 +1,7 @@
 {
-	"name": "javascript-playground",
+	"name": "react-timer-app",
 	"version": "1.0.0",
-	"description": "JavaScript Playground is a project boilerplate I created for small, static, projects and practicing test-driven development.",
+	"description": "React Timer App is a small project I created to practice TDD with React.",
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server --mode development",
@@ -21,18 +21,16 @@
 	},
 	"lint-staged": {
 		"*.js": [
-			"eslint --fix",
-			"git add"
+			"eslint --fix"
 		],
 		"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
 			"prettier --write",
-			"jest --findRelatedTests",
-			"git add"
+			"jest --findRelatedTests"
 		]
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/georgebullock/javascript-playground.git"
+		"url": "git@github.com:georgebullock/react-timer-app.git"
 	},
 	"keywords": [
 		"html",
@@ -45,18 +43,24 @@
 	"author": "George Bullock",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/georgebullock/javascript-playground/issues"
+		"url": "https://github.com/georgebullock/react-timer-app/issues"
 	},
-	"homepage": "https://github.com/georgebullock/javascript-playground#readme",
+	"homepage": "https://github.com/georgebullock/react-timer-app#readme",
 	"devDependencies": {
 		"@babel/core": "^7.8.6",
 		"@babel/plugin-proposal-class-properties": "^7.8.3",
 		"@babel/preset-env": "^7.8.6",
 		"@babel/preset-flow": "^7.8.3",
+		"@babel/preset-react": "^7.8.3",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.0.6",
 		"clean-webpack-plugin": "^3.0.0",
 		"css-loader": "^3.4.2",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-flowtype": "^4.6.0",
+		"eslint-plugin-react": "^7.19.0",
+		"flow-bin": "^0.119.1",
 		"html-webpack-plugin": "^3.2.0",
 		"husky": "^4.2.3",
 		"jest": "^25.1.0",
@@ -69,12 +73,12 @@
 		"style-loader": "^1.1.3",
 		"webpack": "^4.42.0",
 		"webpack-cli": "^3.3.11",
-		"webpack-dev-server": "^3.10.3",
-		"webpack-node-externals": "^1.7.2",
-		"eslint": "^6.8.0",
-		"eslint-config-prettier": "^6.10.0",
-		"eslint-plugin-flowtype": "^4.6.0",
-		"flow-bin": "^0.119.1"
+		"webpack-dev-server": "^3.10.3"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0",
+		"semantic-ui-react": "^0.88.2",
+		"uuid": "^7.0.2"
+	}
 }

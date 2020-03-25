@@ -7,7 +7,9 @@
 	"extends": ["eslint:recommended", "eslint-config-prettier"],
 	"plugins": ["flowtype"],
 	"rules": {
-		"no-console": "off"
+		"no-console": "off",
+		"react/react-in-jsx-scope": "off",
+		"no-unused-vars": "off"
 	},
 	"env": {
 		"browser": true,

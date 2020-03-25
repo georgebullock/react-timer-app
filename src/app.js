@@ -1,5 +1,6 @@
-// @flow
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TimersDashboard from './components/TimerApp/TimerApp';
 import './../src/app.scss';
-import { welcome } from './modules/welcome';
 
-console.log(welcome());
+ReactDOM.render(<TimersDashboard />, document.querySelector('#react-entry'));

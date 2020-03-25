@@ -3,12 +3,6 @@
 @import './src/styles/global/_vars';
 @import './src/styles/global/_print';
 
-// Launch page styles
-main {
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	color: #f4f4f4;
-	background-color: #36454f;
+.main {
+	padding: 1rem;
 }
