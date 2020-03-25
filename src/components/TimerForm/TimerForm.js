@@ -6,12 +6,10 @@ class TimerForm extends React.Component {
 		project: this.props.project || ''
 	};
 
-	// Refactor names for clarity
 	onTitleNameChange = e => {
 		this.setState({ title: e.target.value });
 	};
 
-	// Refactor names for clarity
 	onProjectNameChange = e => {
 		this.setState({ project: e.target.value });
 	};
@@ -25,7 +23,6 @@ class TimerForm extends React.Component {
 	};
 
 	onFormCloseClick = () => {
-		console.log('1: onFormCloseClick');
 		this.props.handleFormClose();
 	};
 

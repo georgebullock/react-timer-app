@@ -30,15 +30,12 @@ class TimersDashboard extends React.Component {
 	createTimer = newTimerData => {
 		const newTimer = helpers.newTimer(newTimerData);
 
-		// Using concat to modify state is safe because concat does not modify the original array
 		this.setState({
 			timers: this.state.timers.concat(newTimer)
 		});
 	};
 
-	// Could refactor to do work directly on a new object that's passed to this.setState
 	updateTimer = formData => {
-		console.log('updateTimer: ', formData);
 		const tempState = Object.assign({}, this.state);
 
 		tempState.timers = tempState.timers.map(timer => {
@@ -49,9 +46,7 @@ class TimersDashboard extends React.Component {
 		this.setState(tempState);
 	};
 
-	// Refactor to do work directly inside a new object that's passed to this.setState
 	deleteTimer = id => {
-		console.log('deleteTimer: ', id);
 		const tempState = Object.assign({}, this.state);
 		tempState.timers = tempState.timers.filter(timer => timer.id !== id);
 

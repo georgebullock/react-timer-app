@@ -2,14 +2,11 @@ import React from 'react';
 import { helpers } from '../../helpers/helpers';
 
 class Timer extends React.Component {
-	// This method is not here in example. Understand why and refactor if you agree with author.
 	onFormEdit = () => {
-		console.log('1: onFormEdit');
 		this.props.initiateUpdateTimer();
 	};
 
 	onFormDelete = () => {
-		console.log('1: onFormDelete');
 		this.props.initiateDeleteTimer();
 	};
 
