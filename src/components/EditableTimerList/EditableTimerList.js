@@ -26,7 +26,7 @@ class EditableTimerList extends React.Component {
 			);
 		});
 
-		return <div id="timers">{timers}</div>;
+		return <ul className="timers">{timers}</ul>;
 	}
 }
 
