@@ -21,13 +21,11 @@
 	},
 	"lint-staged": {
 		"*.js": [
-			"eslint --fix",
-			"git add"
+			"eslint --fix"
 		],
 		"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
 			"prettier --write",
-			"jest --findRelatedTests",
-			"git add"
+			"jest --findRelatedTests"
 		]
 	},
 	"repository": {
