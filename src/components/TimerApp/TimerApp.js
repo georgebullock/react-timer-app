@@ -7,7 +7,7 @@ class TimersDashboard extends React.Component {
 		timers: [
 			{
 				id: uuidv4(),
-				title: 'Learn React',
+				title: 'Level Up Your React Skills',
 				project: 'Get a React job',
 				elapsed: 8986300,
 				runningSince: Date.now()
