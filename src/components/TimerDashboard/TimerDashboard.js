@@ -70,7 +70,7 @@ class TimersDashboard extends React.Component {
 						deleteTimer={this.deleteTimer}
 						updateTimer={this.updateTimer}
 						onStartClick={this.startTimer}
-						onStopClick={this.pauseTimer}
+						onPauseClick={this.pauseTimer}
 					/>
 					<ToggleableTimerForm
 						isOpen={false}

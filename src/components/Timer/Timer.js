@@ -16,7 +16,7 @@ class Timer extends React.Component {
 	};
 
 	onPauseClick = () => {
-		this.props.onStartClick();
+		this.props.onPauseClick();
 	};
 
 	render() {
@@ -43,7 +43,7 @@ class Timer extends React.Component {
 					</div>
 				</div>
 				<TimerButton
-					isRunning={false}
+					isRunning={true}
 					onStartClick={this.onStartClick}
 					onPauseClick={this.onPauseClick}
 				/>

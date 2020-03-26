@@ -6,7 +6,7 @@ class TimerButton extends React.Component {
 			return (
 				<div
 					className="ui bottom attached blue basic button"
-					onClick={this.onStartClick}
+					onClick={this.props.onStartClick}
 				>
 					Start
 				</div>
@@ -15,7 +15,7 @@ class TimerButton extends React.Component {
 			return (
 				<div
 					className="ui bottom attached red basic button"
-					onClick={this.onStartClick}
+					onClick={this.props.onPauseClick}
 				>
 					Stop
 				</div>
