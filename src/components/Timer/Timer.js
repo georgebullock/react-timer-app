@@ -1,4 +1,5 @@
 import React from 'react';
+import TimerButton from './../TimerButton/TimerButton';
 import { helpers } from '../../helpers/helpers';
 
 class Timer extends React.Component {
@@ -11,6 +12,10 @@ class Timer extends React.Component {
 	};
 
 	onStartClick = () => {
+		this.props.onStartClick();
+	};
+
+	onPauseClick = () => {
 		this.props.onStartClick();
 	};
 
@@ -37,12 +42,11 @@ class Timer extends React.Component {
 						</span>
 					</div>
 				</div>
-				<div
-					className="ui bottom attached blue basic button"
-					onClick={this.onStartClick}
-				>
-					Start
-				</div>
+				<TimerButton
+					isRunning={false}
+					onStartClick={this.onStartClick}
+					onPauseClick={this.onPauseClick}
+				/>
 			</div>
 		);
 	}

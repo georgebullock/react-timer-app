@@ -53,6 +53,7 @@ class EditableTimer extends React.Component {
 						initiateDeleteTimer={this.handleDeleteTimer}
 						initiateUpdateTimer={this.openUpdateTimerForm}
 						onStartClick={this.props.onStartClick}
+						onStopClick={this.pauseElapsedTime}
 					/>
 				</li>
 			);
