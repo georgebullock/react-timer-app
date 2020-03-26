@@ -22,6 +22,7 @@ class EditableTimerList extends React.Component {
 					runningSince={timer.runningSince}
 					deleteTimerFromList={this.deleteEditableTimer}
 					passDataToDashboard={this.passDataToDashboard}
+					onStartClick={this.props.onStartClick}
 				/>
 			);
 		});

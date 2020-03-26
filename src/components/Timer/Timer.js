@@ -10,6 +10,10 @@ class Timer extends React.Component {
 		this.props.initiateDeleteTimer();
 	};
 
+	onStartClick = () => {
+		this.props.onStartClick();
+	};
+
 	render() {
 		const elapsedString = helpers.renderElapsedString(this.props.elapsed);
 
@@ -33,7 +37,12 @@ class Timer extends React.Component {
 						</span>
 					</div>
 				</div>
-				<div className="ui bottom attached blue basic button">Start</div>
+				<div
+					className="ui bottom attached blue basic button"
+					onClick={this.onStartClick}
+				>
+					Start
+				</div>
 			</div>
 		);
 	}

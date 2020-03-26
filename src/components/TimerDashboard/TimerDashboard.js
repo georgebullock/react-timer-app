@@ -53,6 +53,10 @@ class TimersDashboard extends React.Component {
 		this.setState(tempState);
 	};
 
+	updateElapsedTime = () => {
+		console.log('Start elapsed');
+	};
+
 	render() {
 		return (
 			<div className="ui three column centered grid">
@@ -61,6 +65,7 @@ class TimersDashboard extends React.Component {
 						timers={this.state.timers}
 						deleteTimer={this.deleteTimer}
 						updateTimer={this.updateTimer}
+						onStartClick={this.updateElapsedTime}
 					/>
 					<ToggleableTimerForm
 						isOpen={false}
