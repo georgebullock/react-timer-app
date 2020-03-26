@@ -3,6 +3,10 @@ import TimerButton from './../TimerButton/TimerButton';
 import { helpers } from '../../helpers/helpers';
 
 class Timer extends React.Component {
+	state = {
+		showStartButton: false
+	};
+
 	onFormEdit = () => {
 		this.props.initiateUpdateTimer();
 	};
@@ -13,10 +17,12 @@ class Timer extends React.Component {
 
 	onStartClick = () => {
 		this.props.onStartClick();
+		this.setState({ showStartButton: false });
 	};
 
 	onPauseClick = () => {
 		this.props.onPauseClick();
+		this.setState({ showStartButton: true });
 	};
 
 	render() {
@@ -43,7 +49,7 @@ class Timer extends React.Component {
 					</div>
 				</div>
 				<TimerButton
-					isRunning={true}
+					showStartButton={this.state.showStartButton}
 					onStartClick={this.onStartClick}
 					onPauseClick={this.onPauseClick}
 				/>

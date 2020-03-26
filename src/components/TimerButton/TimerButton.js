@@ -2,7 +2,7 @@ import React from 'react';
 
 class TimerButton extends React.Component {
 	render() {
-		if (this.props.isRunning) {
+		if (this.props.showStartButton) {
 			return (
 				<div
 					className="ui bottom attached blue basic button"
