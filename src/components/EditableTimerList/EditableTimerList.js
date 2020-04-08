@@ -10,6 +10,14 @@ class EditableTimerList extends React.Component {
 		return this.props.updateTimer(formData);
 	};
 
+	onStartClick = id => {
+		this.props.onStartClick(id);
+	};
+
+	onPauseClick = id => {
+		this.props.onPauseClick(id);
+	};
+
 	render() {
 		const timers = this.props.timers.map(timer => {
 			return (

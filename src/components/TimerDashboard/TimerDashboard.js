@@ -53,12 +53,12 @@ class TimersDashboard extends React.Component {
 		this.setState(tempState);
 	};
 
-	startTimer = () => {
-		console.log('Start timer');
+	startTimer = id => {
+		console.log(this.state.id);
 	};
 
-	pauseTimer = () => {
-		console.log('Stop timer');
+	pauseTimer = id => {
+		console.log(id);
 	};
 
 	render() {

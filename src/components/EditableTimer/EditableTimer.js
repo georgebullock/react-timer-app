@@ -27,6 +27,14 @@ class EditableTimer extends React.Component {
 		return this.props.passDataToDashboard(formData);
 	};
 
+	onStartClick = () => {
+		this.props.onStartClick(this.props.id);
+	};
+
+	onPauseClick = () => {
+		this.props.onPauseClick(this.props.id);
+	};
+
 	render() {
 		if (this.state.editFormOpen) {
 			return (
