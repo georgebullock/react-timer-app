@@ -15,11 +15,20 @@ class TimerForm extends React.Component {
 	};
 
 	onFormSubmitClick = () => {
-		this.props.handleFormSubmit({
-			id: this.props.id,
-			title: this.state.title,
-			project: this.state.project
-		});
+		if (this.props.id) {
+			this.props.updateTimer({
+				id: this.props.id,
+				title: this.state.title,
+				project: this.state.project
+			});
+		} else {
+			this.props.createTimer({
+				title: this.state.title,
+				project: this.state.project
+			});
+		}
+
+		this.props.handleFormClose();
 	};
 
 	onFormCloseClick = () => {
