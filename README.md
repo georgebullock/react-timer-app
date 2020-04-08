@@ -1,12 +1,9 @@
 # REACT TIMER APP
 
-This project is a work in progress. This README.md is a skeleton for the
-project's future README.md
-
 ### OVERVIEW
+React Timer App is a cancelled projected. The purpose of the project was to practice TDD with React. I cancelled it becauase I was assigned an unplanned, higher-priority, project that consumed the time I made for this project. Also, I achieved my learning goal for this project via the unplanned project. Therefore, I decided to cancel this project and move on.
 
 ### PROJECT STACK
-
 - HTML5
 - CSS3 via SCSS
 - ES6+ via Babel
@@ -26,7 +23,7 @@ project's future README.md
 ##### Step 1:
 
 ```bash
-git clone
+git clone git@github.com:georgebullock/react-timer-app.git
 ```
 
 ##### Step 2:
@@ -52,9 +49,13 @@ yarn start
 ### ADDITIONAL INFORMATION
 
 #### Project Motivation:
+I was motivated to do this project to get some practice writing and testing React components.
 
 #### Project Status:
+Cancelled
 
 #### Project Roadmap:
+No Additonal features planned
 
 #### Known Issues:
+None that I'm aware of. If you find something feel free create an issue or send me a pull request.
