@@ -2,12 +2,12 @@ import React from 'react';
 import { helpers } from '../../helpers/helpers';
 
 class Timer extends React.Component {
-	onFormEdit = () => {
-		this.props.initiateUpdateTimer();
+	onFormEditClick = () => {
+		this.props.openForm();
 	};
 
-	onFormDelete = () => {
-		this.props.initiateDeleteTimer();
+	onFormDeleteClick = () => {
+		this.props.deleteTimer(this.props.id);
 	};
 
 	render() {
@@ -22,11 +22,14 @@ class Timer extends React.Component {
 						<h2>{elapsedString}</h2>
 					</div>
 					<div className="extra content">
-						<span onClick={this.onFormEdit} className="right floated edit icon">
+						<span
+							onClick={this.onFormEditClick}
+							className="right floated edit icon"
+						>
 							<i className="edit icon" />
 						</span>
 						<span
-							onClick={this.onFormDelete}
+							onClick={this.onFormDeleteClick}
 							className="right floated trash icon"
 						>
 							<i className="trash icon" />

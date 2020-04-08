@@ -2,14 +2,6 @@ import React from 'react';
 import EditableTimer from './../EditableTimer/EditableTimer';
 
 class EditableTimerList extends React.Component {
-	deleteEditableTimer = id => {
-		this.props.deleteTimer(id);
-	};
-
-	passDataToDashboard = formData => {
-		return this.props.updateTimer(formData);
-	};
-
 	render() {
 		const timers = this.props.timers.map(timer => {
 			return (
@@ -20,8 +12,8 @@ class EditableTimerList extends React.Component {
 					project={timer.project}
 					elapsed={timer.elapsed}
 					runningSince={timer.runningSince}
-					deleteTimerFromList={this.deleteEditableTimer}
-					passDataToDashboard={this.passDataToDashboard}
+					deleteTimer={this.props.deleteTimer}
+					updateTimer={this.props.updateTimer}
 				/>
 			);
 		});

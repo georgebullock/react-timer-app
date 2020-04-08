@@ -7,24 +7,12 @@ class EditableTimer extends React.Component {
 		editFormOpen: false
 	};
 
-	openUpdateTimerForm = () => {
+	openForm = () => {
 		this.setState({ editFormOpen: true });
-	};
-
-	handleDeleteTimer = () => {
-		this.props.deleteTimerFromList(this.props.id);
-	};
-
-	handleFormClose = () => {
-		this.closeForm();
 	};
 
 	closeForm = () => {
 		this.setState({ editFormOpen: false });
-	};
-
-	handleFormData = formData => {
-		return this.props.passDataToDashboard(formData);
 	};
 
 	render() {
@@ -36,7 +24,7 @@ class EditableTimer extends React.Component {
 						title={this.props.title}
 						project={this.props.project}
 						isOpen={this.state.editFormOpen}
-						handleFormSubmit={this.handleFormData}
+						updateTimer={this.props.updateTimer}
 						handleFormClose={this.closeForm}
 					/>
 				</li>
@@ -50,8 +38,8 @@ class EditableTimer extends React.Component {
 						project={this.props.project}
 						elapsed={this.props.elapsed}
 						runningSince={this.props.runningSince}
-						initiateDeleteTimer={this.handleDeleteTimer}
-						initiateUpdateTimer={this.openUpdateTimerForm}
+						deleteTimer={this.props.deleteTimer}
+						openForm={this.openForm}
 					/>
 				</li>
 			);

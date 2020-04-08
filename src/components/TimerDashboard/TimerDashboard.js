@@ -25,8 +25,6 @@ class TimersDashboard extends React.Component {
 		]
 	};
 
-	handleCreateTimer = timer => this.createTimer(timer);
-
 	createTimer = newTimerData => {
 		const newTimer = helpers.newTimer(newTimerData);
 
@@ -36,36 +34,33 @@ class TimersDashboard extends React.Component {
 	};
 
 	updateTimer = formData => {
-		const tempState = Object.assign({}, this.state);
+		const state = Object.assign({}, this.state);
 
-		tempState.timers = tempState.timers.map(timer => {
+		state.timers = state.timers.map(timer => {
 			if (timer.id !== formData.id) return timer;
 			return (timer = Object.assign({}, timer, formData));
 		});
 
-		this.setState(tempState);
+		this.setState(state);
 	};
 
 	deleteTimer = id => {
-		const tempState = Object.assign({}, this.state);
-		tempState.timers = tempState.timers.filter(timer => timer.id !== id);
+		const state = Object.assign({}, this.state);
+		state.timers = state.timers.filter(timer => timer.id !== id);
 
-		this.setState(tempState);
+		this.setState(state);
 	};
 
 	render() {
 		return (
-			<div className="ui three column centered grid">
+			<div className="ui two column centered grid">
 				<div className="column">
 					<EditableTimerList
 						timers={this.state.timers}
 						deleteTimer={this.deleteTimer}
 						updateTimer={this.updateTimer}
 					/>
-					<ToggleableTimerForm
-						isOpen={false}
-						onFormSubmit={this.handleCreateTimer}
-					/>
+					<ToggleableTimerForm isOpen={false} createTimer={this.createTimer} />
 				</div>
 			</div>
 		);
